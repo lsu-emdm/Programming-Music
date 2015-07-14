@@ -7,60 +7,50 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1348.17">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">/*Welcome to Gibber!</p>
-<p class="p1">The first thing we need to know is how to<span class="Apple-converted-space"> </span></p>
-<p class="p1">execute our code. Move your cursor to<span class="Apple-converted-space"> </span></p>
-<p class="p1">line six and press "control &amp; enter" */</p>
-<p class="p2"><br></p>
-<p class="p1">a =Sine(440)</p>
-<p class="p2"><br></p>
-<p class="p1">/*Great! Now press "control &amp; period"</p>
-<p class="p1">This stops gibber entirely, as you can see<span class="Apple-converted-space"> </span></p>
-<p class="p1">in the bottom of the browser "Gibber has</p>
-<p class="p1">been cleared."</p>
-<p class="p2"><br></p>
-<p class="p1">There are alternatives to clearing Gibber</p>
-<p class="p1">if you want your sounds to stop. Re-execute</p>
-<p class="p1">line six, then execute line 17, 18 and 19*/</p>
-<p class="p2"><br></p>
-<p class="p1">a.disconnect()</p>
-<p class="p1">a.connect()</p>
-<p class="p1">a._</p>
-<p class="p2"><br></p>
-<p class="p1">/*this way gibber can still run other sounds</p>
-<p class="p1">and let you connect or disconnect new sounds,</p>
-<p class="p1">without interupting the music. execute line<span class="Apple-converted-space"> </span></p>
-<p class="p1">25 and then try executing and disconnecting<span class="Apple-converted-space"> </span></p>
-<p class="p1">the Sine(440) */</p>
-<p class="p2"><br></p>
-<p class="p1">b=Drums('xo**-...')</p>
-<p class="p2"><br></p>
-<p class="p1">/* You can always press "control &amp; period" to</p>
-<p class="p1">stop gibber.<span class="Apple-converted-space"> </span></p>
-<p class="p2"><br></p>
-<p class="p1">to execute more than one line of gibber press</p>
-<p class="p1">"alt &amp; enter" on line 35. */</p>
-<p class="p2"><br></p>
-<p class="p1">c=Synth()</p>
-<p class="p1">c.note.seq([0,2,4,5,6,8,10],1/8)</p>
-<p class="p1">c.fx.add(Delay())</p>
-<p class="p2"><br></p>
-<p class="p1">/*you will hear a series of notes, plus an added</p>
-<p class="p1">effect. Execute line 42 to gradually fade out */</p>
-<p class="p2"><br></p>
-<p class="p1">c.amp = Seq([,.9,.8,.7,.6,.5,.4,.3,.2,.1,.0],1/8)</p>
-<p class="p2"><br></p>
-<p class="p1">/* Note that c.amp is not a dissconnection, the<span class="Apple-converted-space"> </span></p>
-<p class="p1">synth is still running. Execute line 48 to set the</p>
-<p class="p1">amplitude back up. */</p>
-<p class="p2"><br></p>
-<p class="p1">c.amp = .9</p>
-<p class="p2"><br></p>
-<p class="p1">c._</p>
+<p class="p1"><span class="s1">/* Programming Music 1</span></p>
+<p class="p1"><span class="s1">Welcome to Gibber!</span></p>
+<p class="p1"><span class="s1">The first thing we need to know is how to<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">execute code. Move your cursor to<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">line six and press "control &amp; enter" */</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a = Sine(440)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/*Great! Now press "control &amp; period"</span></p>
+<p class="p1"><span class="s1">This clears gibber entirely, as you can see<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">in the bottom of the browser "Gibber has</span></p>
+<p class="p1"><span class="s1">been cleared."<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">to execute a code group, place cursor on<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">line 15 and press "alt &amp; enter", both the<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">Drums() and Sine() will start together.*/</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a = Sine(330)</span></p>
+<p class="p1"><span class="s1">b = Drums('x.o.*.-.')</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* Let's say you don't want to stop the drums,</span></p>
+<p class="p1"><span class="s1">but you want to stop the tone:execute line 24,</span></p>
+<p class="p1"><span class="s1">followed by 25 and 26 (use "command &amp; enter") */</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a.disconnect()</span></p>
+<p class="p1"><span class="s1">a.connect()</span></p>
+<p class="p1"><span class="s1">a._ //short and easy to type!</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/*Ok, say we don't want gibber to stop the drums,</span></p>
+<p class="p1"><span class="s1">but we want to change the pattern. Execute line 32</span></p>
+<p class="p1"><span class="s1">with "shift + control + enter"*/</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">b=Drums('xo**-...')</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* you should hear a change right away.</span></p>
+<p class="p1"><span class="s1">Remember You can always press "control &amp; period" to</span></p>
+<p class="p1"><span class="s1">clear gibber entirely.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">End */</span></p>
 </body>
 </html>

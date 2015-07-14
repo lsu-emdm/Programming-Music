@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">/* Programming Music 2</p>
+<p class="p1">Drums and Rythms</p>
+<p class="p1">*/</p>
+<p class="p2"><br></p>
+<p class="p1">a = Drums('x.o.-.*.')</p>
+<p class="p1">/* x o * - . represent different elements of the</p>
+<p class="p1">drumkit, kick, snare, closed high hat, open high hat,</p>
+<p class="p1">and last but not least the rest */</p>
+<p class="p1">a.kill() //yet another way to stop sound...</p>
+<p class="p2"><br></p>
+<p class="p1">b= Drums({kit:'beatbox',note:'asdf'}) /*the way the<span class="Apple-converted-space"> </span></p>
+<p class="p1">drum kit works is by loading soundfiles and there are</p>
+<p class="p1">different kits available. */</p>
+<p class="p1">b._</p>
+<p class="p2"><br></p>
+<p class="p1">c = Drums('xoxo')</p>
+<p class="p1">c.pitch =.5</p>
+<p class="p1">c.amp = .2</p>
+<p class="p1">c.kick.pan = 1 //try changing to 1 or -1 or .5</p>
+<p class="p2"><br></p>
+<p class="p1">Clock.bpm = 90 //slower clock speed I think this is broken.... Charlie?</p>
+<p class="p1">Clock.bpm = 120 // back to default</p>
+<p class="p2"><br></p>
+<p class="p1">console.log(Clock.bpm) // Console.log is your friend!</p>
+<p class="p1">console.log(Clock.timeSignature)</p>
+<p class="p2"><br></p>
+<p class="p1">// Drums can be a little confusing.<span class="Apple-converted-space"> </span></p>
+<p class="p1">d =Drums('x')</p>
+<p class="p1">d = Drums('x,1') // are the same...</p>
+<p class="p1">d = Drums('x,1/16')// very different</p>
+<p class="p1">d._</p>
+<p class="p2"><br></p>
+<p class="p1">//Drums automatically divides the measure by number of notes in the string</p>
+<p class="p1">d=Drums('oxxx') //4 1/4 notes in the default 4/4 measure</p>
+<p class="p1">d=Drums('oxxxx')// 5 1/5 notes in a 4/4 measure</p>
+<p class="p2"><br></p>
+<p class="p1">Clock.timeSignature = '5/4' // change the meter</p>
+<p class="p1">d=Drums('oxxxx,1/4') // 5/4 pattern! why do I need the 1/4? Charlie?</p>
+</body>
+</html>

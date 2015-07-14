@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">/*Gibber Playground 1 Programming Music</span></p>
+<p class="p1"><span class="s1">Play around with the following code. Experiment!</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">*/</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a = Sine(440, .1) //try changing the numbers!</span></p>
+<p class="p1"><span class="s1">//the first number is frequency, the next is amplitude</span></p>
+<p class="p1"><span class="s1">a._</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">b = Synth()</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* Synth() is a basic synthesizer for gibber, has more<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">properties than Sine(), and can recognize notes like 'c4'</span></p>
+<p class="p1"><span class="s1">*/</span></p>
+<p class="p1"><span class="s1">b.note('c4') // change the note to 'f4' or 'Bb4' or 'C#3'</span></p>
+<p class="p1"><span class="s1">b.note(0)// Gibber can also refer to notes scale members</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">// .note is one parameter but Synth has many more</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">b.attack = ms(1) //1 millisecond attack</span></p>
+<p class="p1"><span class="s1">b.decay = 1/2 // 1/2 note value *more on this later...</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">c=Synth({attack:ms(1)}) //another way of declaring</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">c.play([0,1,2,3,4,5,6,7],1/4)</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">// .play can take an array of notes , and durrations</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">c.play([0,7],[ms(100),ms(200)]) // or</span></p>
+<p class="p1"><span class="s1">c.play([0,7],[.5,.25,.125]) //or</span></p>
+<p class="p1"><span class="s1">c.play(2,[1/4,1/8,1/6]) // or even</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">c.play([0,1,3].rnd(),[1/4,1/8,1/16].rnd())</span></p>
+<p class="p1"><span class="s1">//.rnd() chooses randomly from the array[]</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">//End</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+</body>
+</html>
