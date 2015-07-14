@@ -1,0 +1,38 @@
+/* Programming Music 2
+Drums and Rythms
+*/
+
+a = Drums('x.o.-.*.')
+/* x o * - . represent different elements of the
+drumkit, kick, snare, closed high hat, open high hat,
+and last but not least the rest */
+a.kill() //yet another way to stop sound...
+
+b= Drums({kit:'beatbox',note:'asdf'}) /*the way the 
+drum kit works is by loading soundfiles and there are
+different kits available. */
+b._
+
+c = Drums('xoxo')
+c.pitch =.5
+c.amp = .2
+c.kick.pan = 1 //try changing to 1 or -1 or .5
+
+Clock.bpm = 90 //slower clock speed I think this is broken.... Charlie?
+Clock.bpm = 120 // back to default
+
+console.log(Clock.bpm) // Console.log is your friend!
+console.log(Clock.timeSignature)
+
+// Drums can be a little confusing. 
+d =Drums('x')
+d = Drums('x,1') // are the same...
+d = Drums('x,1/16')// very different
+d._
+
+//Drums automatically divides the measure by number of notes in the string
+d=Drums('oxxx') //4 1/4 notes in the default 4/4 measure
+d=Drums('oxxxx')// 5 1/5 notes in a 4/4 measure
+
+Clock.timeSignature = '5/4' // change the meter
+d=Drums('oxxxx,1/4') // 5/4 pattern! why do I need the 1/4? Charlie?

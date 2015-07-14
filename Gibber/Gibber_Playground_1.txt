@@ -1,0 +1,36 @@
+/*Gibber Playground 1 Programming Music
+Play around with the following code. Experiment!
+
+*/
+
+a = Sine(440, .1) //try changing the numbers!
+//the first number is frequency, the next is amplitude
+a._
+
+b = Synth()
+
+/* Synth() is a basic synthesizer for gibber, has more 
+properties than Sine(), and can recognize notes like 'c4'
+*/
+b.note('c4') // change the note to 'f4' or 'Bb4' or 'C#3'
+b.note(0)// Gibber can also refer to notes scale members
+
+// .note is one parameter but Synth has many more
+
+b.attack = ms(1) //1 millisecond attack
+b.decay = 1/2 // 1/2 note value *more on this later...
+
+c=Synth({attack:ms(1)}) //another way of declaring
+
+c.play([0,1,2,3,4,5,6,7],1/4)
+
+// .play can take an array of notes , and durrations
+
+c.play([0,7],[ms(100),ms(200)]) // or
+c.play([0,7],[.5,.25,.125]) //or
+c.play(2,[1/4,1/8,1/6]) // or even
+
+c.play([0,1,3].rnd(),[1/4,1/8,1/16].rnd())
+//.rnd() chooses randomly from the array[]
+ 
+//End
