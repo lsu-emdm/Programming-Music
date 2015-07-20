@@ -1,0 +1,54 @@
+/*Gibber Playground 2 Programming Music
+Play around with the following code. Experiment!
+*/
+
+a = Sine(440, .2) //try changing the numbers!
+/*the first number is frequency, the next is 
+amplitude, don't set this much higher than 1,
+it gets loud! */
+a._
+
+aa =Sine(200)
+aa =Sine(300)
+/*double letter variable are different than
+single letter variables. Notice after executing
+we now hear two different pitches! clear */
+aa.kill() // only kills the most recent!
+
+Gibber.clear() //that did it!
+
+/* compare what happens with single letter 
+variables: the single letter variables are replaced
+by with new values, whereas double letter variables
+create new instances. Try it!*/
+a=Sine(200)
+a=Sine(300)
+a.kill() //nothing leftover this time!
+
+b = Synth()
+
+/* Synth() is a basic synthesizer for gibber, it has all the
+properties for an Oscillator and an Envelope, and can 
+recognize frequency from a string like 'c4' */
+b.note('c4') // change the note to 'f4' or 'Bb4' or 'C#3'
+b.note(0)// Gibber can also refer to notes scale members
+
+// .note is one parameter but Synth has many more
+b.play('c4',1/4)// .play lets notes and rhythms repeat continuously
+b.attack = ms(1) //properties can be adjusted while .play'ing
+b.decay = 1/2 // 
+
+
+c=Synth({attack:ms(1)}) //declaring properties with braces{}
+
+c.play([0,1,2,3,4,5,6,7],1/4) //.play can read an array[] of notes or durations!
+//playing them in sequence! Look at the different ways we can use .play:
+
+c.play([0,7],[ms(100),ms(500)]) // or
+c.play([0,7],[.5,.25,.125]) //or
+c.play(2,[1/4,1/8,1/16]) // or even
+
+c.play([0,1,2,5,6].rnd(),[1/4,1/8,1/16].rnd())
+//.rnd() chooses randomly from the array[]
+//End
+
