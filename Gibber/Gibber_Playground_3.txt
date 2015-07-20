@@ -1,7 +1,6 @@
-/*Gibber Playground 2 Programming Music
+/*Gibber Playground 3 Programming Music
 Play around with the following code. Experiment!
 */
-Notation.on()
 a=Drums('x...x..x**.-o.*.')
 b=Drums('*.x...x..x**.-o.')
 a.amp=.5
