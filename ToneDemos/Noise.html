@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Noise</title>
+
+		<script type="text/javascript" src="../Tone/Tone.js"></script>
+</head>
+<body>
+
+	<script id="NoiseCode" type="text/javascript">
+	// Noise generator: 
+	// MEMBERS: .type {"Pink, White, Brown"}
+	// .onended callback involved when source is done playing
+	// .volume = output in DB
+
+	// Instantiate
+	var noise = new Tone.Noise ("pink").start();
+
+
+	// Shape the noise with a filter
+	var autoFilter = new Tone.AutoFilter( {
+		"frequency" : "8m",
+		"min" : 800, 
+		"max" : 15000
+	}).connect(Tone.Master);
+
+	//connect the noise
+	noise.connect(autoFilter);
+	//start the autofilter LFO
+	//autoFilter.start()
+
+	console.log(noise.state);
+
+	// Console.log(autoFilter.state);
+
+	/*
+	// LET'S EXPERIEMENT WITH CALL NEW INSTANCES
+	// a new instance of brown noise generator, name it noiseBrown
+
+	var noiseBrown = new Tone.Noise("brown").start();
+	
+	// connect the brown noise generator to master out
+
+	noiseBrown.connect(Tone.Master);
+
+	*/
+
+
+
+	</script>
+
+</body>
+</html>
