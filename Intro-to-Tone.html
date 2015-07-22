@@ -23,12 +23,6 @@
 
 <p><a href="htt://somewhere.com">Blocks:</a></p>
 
-<h1>Timing with Tone.js</h1>
-
-<p>Time (Music is time based. Interesting things should happen in relation to time)</p>
-
-<p>Transport object methods setInterval(), setTimeout(), setTimeline()</p>
-
 <h1>Our Tools</h1>
 
 <h3>1. Atom - our code editor</h3>
@@ -43,17 +37,17 @@
 
 <p>We will use Chrome to view our pages. Chrome will knows to interpret <strong>Javascript</strong>, the language we will be using with Node.js.</p>
 
-<h3>3. console - our debugging tool within Chrome</h3>
+<h3>3. Console - our debugging tool within Chrome</h3>
 
 <p>When we code, use debugging tools to help us (the coders) check for problems (bugs) within the code. If a portion or all of the code does not work, debugging methods will help us find (and solve those problems). When we are working with Tone.js this week, we will use console to help us check on code. </p>
 
 <h1>Let’s Code!</h1>
 
-<p>We will set a page with in Atom. </p>
+<p>We will start a page within Atom. </p>
 
 <ol>
-<li><p>Open Atom at in Applications folder.</p></li>
-<li><p>Copy the code below:</p>
+<li><p>Open Atom which is in the Applications folder (maybe on your dock).</p></li>
+<li><p>Copy the code below and paste in a new, blank page:</p>
 
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;head&gt;
@@ -63,8 +57,10 @@
 &lt;body&gt;
     &lt;script id="ToneCode" type="text/javascript"&gt;
     
-    Your awesome code go here! 
-
+    &lt;!-- Your awesome code go here! &gt;
+        
+    // More awesome code!
+    
     &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -74,11 +70,13 @@
 <li><p>What do you see? What do you hear?</p></li>
 </ol>
 
+<hr>
+
 <p><strong>Let’s add a console log message to ourselves</strong>. </p>
 
-<p>Add the line of code below inside the <code>&lt;script&gt; &lt;/script&gt;</code> brackets. </p>
+<p>Add the line of code below inside the <code>&lt;script&gt; &lt;/script&gt;</code> brackets. When we work with <strong>Javascript</strong> and <strong>Tone.js</strong>, almost all the code we use will be inside the <code>&lt;script&gt; &lt;/script&gt;</code> brackets. </p>
 
-<pre><code>    `console.log("Hello World");`
+<pre><code>    console.log("Hello World");
 </code></pre>
 
 <p>Save the file and reopen it Chrome. </p>
@@ -91,6 +89,53 @@
 
 <p>You should be able to see the words ‘Hello World’ just as we typed out in code. </p>
 
+<p>You have just created a message to yourself through the console. There will be times where you want to test a certain aspect of your code (maybe checking the time, or the value of a certain variable, or which section of music you might be in)– you will do this separate from the user interface which you design in BRAID.</p>
+
+<h1>Let’s create some code and find the look for a message in the console</h1>
+
+<h2>Create a variable</h2>
+
+<p>A variable piece of data we want to use. A variable could be a value or name. As the word ‘variable’ suggests, that information assigned to it can change. </p>
+
+<p>Let’s create a variable and <strong>assign</strong> something to it. Type out the lines below and be sure to capitalize the certain letters. </p>
+
+<pre><code>    var myName;
+    myName = "Nick";
+    var myNeighborsName;
+    myNeighborsName = "Danny";
+</code></pre>
+
+<p>We’ve created two variables <code>myName</code> and <code>myNeighborsName</code>. Now, let’s tell the browser’s console to print those names. Add the following text:</p>
+
+<pre><code>    console.log(myName);
+    console.log(myNeighborsName);
+</code></pre>
+
+<p>What do you think will appear in the console? Did you notice we removed the quotation marks when we are calling a variable? </p>
+
+<p>What happens when we use <code>console.log(myNeighborsName, myName);</code> ?</p>
+
+<p><strong>EXPERIMENT: OWN YOUR OWN</strong>: 3 minute exercise</p>
+
+<p>Create a new message to yourself. Experiment with these ideas below:</p>
+
+<ul>
+<li>Try different variables.</li>
+<li><p>Try a math equation:</p>
+
+<pre><code>var addend1 = 20;
+var addend2 = 10;
+var solution = addend1 + addend2;
+console.log(solution);
+</code></pre></li>
+<li>Try using different values or different math operation (subtraction or multiplication).</li>
+<li>Try purposely calling a variable you didn’t create. What does console tell you?</li>
+</ul>
+
+<hr>
+
+<h1>EVERYTHING BELOW HERE IS NOT SORTED and NOT READY</h1>
+
 <h1>Let’s make some sounds!</h1>
 
 <p>Create synthesizer (whatever one):</p>
@@ -101,6 +146,12 @@
 
 <pre><code>    newOscillator == new omniOscillator;
 </code></pre>
+
+<ul>
+<li>The word ‘new’ tells <strong>Javascript</strong> to create a new <strong>instance</strong> of a predetermined <strong>class</strong>.</li>
+</ul>
+
+<p><strong>WHAT IS A CLASS?</strong></p>
 
 <p>Create an oscillator with a filter</p>
 
@@ -113,6 +164,12 @@
 <p>Let’s use enveloping on the oscillator, on the noise </p>
 
 <p>Let’s create an array of oscillators or noise generators</p>
+
+<h1>Timing with Tone.js</h1>
+
+<p>Time (Music is time based. Interesting things should happen in relation to time)</p>
+
+<p>Transport object methods setInterval(), setTimeout(), setTimeline()</p>
 
 <h2>Let’s get complicated!</h2>
 
