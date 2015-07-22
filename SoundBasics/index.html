@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Programming Music: Sound Basics</title>
+	<style>
+		.scope {
+			width: 200px;
+			height: 100px;
+			background-color: #000000;
+		}
+		.gui {
+			white-space: nowrap;
+		}
+		
+		table {
+			border: 1px solid black;
+		}
+		
+		td {
+			vertical-align: top;
+			border: 1px dotted black;
+			padding-right: 20px;
+		}
+	</style>
+	
+	<link href="../stylesheets/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/shThemeDefault.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="../javascripts/Tone.min.js"></script>
+	<script type="text/javascript" src="../javascripts/nexusUI.js"></script>
+	<script type="text/javascript" src="../javascripts/shCore.js"></script>
+	<script type="text/javascript" src="../javascripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../javascripts/wavy-jones.js"></script>
+</head>
+<body>
+	<h1 style="text-align: center;">Sound Basics</h1>
+	<table>
+		<tr>
+			<td>
+				<h3>Sine Wave</h3>
+				<div class="gui">
+					<canvas id="sineToggle" nx="toggle"></canvas>
+					<canvas id="sineFreqSlider" nx="slider" width="50" height="25"></canvas>
+					<canvas id="sineVolSlider" nx="slider" height="50" width="25"></canvas>
+				</div>
+				<p><span id="freqLabel">Frequency: 440Hz</span><br>
+				<span id="volLabel">Level: -12 dB</span></p>
+				<div id="oscilloscope1" class="scope"></div>
+			</td>
+			<td>
+				<pre class="brush: js">
+var sineOsc = new Tone.Oscillator({
+	frequency: 440, 
+	type: "sine",
+	volume: -12
+}).toMaster();
+
+//Toggle On/Off
+sineToggle.on('*', function(data){
+	if (data.value == 1){
+		sineOsc.start();
+	}else if (data.value == 0){
+		sineOsc.stop();
+	}
+});
+
+//Frequency slider function
+sineFreqSlider.on('*', function(data){
+	//Scale and offset
+	var frequency = data.value * 1000 + 100; 
+	sineOsc.frequency.value = frequency;
+});
+
+//Volume slider function
+sineVolSlider.on('*', function(data){
+	/*Trickier scale and offset (0-1 mapped to -60-0).  Math.ceil is a built-in 
+	JS function for rounding.*/
+	var volume = Math.ceil((data.value * -1 + 1) * -60);
+	sineOsc.volume.value = volume;
+});
+				</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>Adding Partials of a Sawtooth Wave</h3>
+				<div class="gui">
+					<canvas id="sawToggle" nx="toggle"></canvas>
+					<canvas id="sawPartialNumber" nx="number" height="25" width="50"></canvas>
+				</div>
+				<div id="oscilloscope2" class="scope"></div>
+			</td>
+			<td>
+				<pre class="brush: js">
+				
+var sawOsc = new Tone.Oscillator({
+	frequency: 440,
+	volume: -12
+}).toMaster();
+
+/* 
+Sawtooth partial selector function.  Tone.js has
+built in functionality that allows us to specify how many 
+overtones (partials) the wave will have. 
+*/ 
+sawPartialNumber.on('*', function(data){
+if (data.value >= 1){
+		sawOsc.type = "sawtooth" + (data.value + 1);
+	}
+});
+				</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>Phase Cancellation</h3>
+				<pre> Sine  Triangle</pre>
+				<div class="gui">
+					<canvas id="phaseSineToggle" nx="toggle"></canvas>
+					<canvas id="phaseTriToggle" nx="toggle"></canvas>
+					<canvas id="phaseSlider" nx="slider" width="75" height="25"></canvas>
+				</div>
+				<p><span id="phaseLabel">0&deg; Out of Phase</span></p>
+				<div id="oscilloscope3" class="scope"></div>
+			</td>
+			<td>
+				<pre class="brush: js">
+var phaseOsc1 = new Tone.Oscillator({
+	frequency: 440,
+	volume: -12
+}).toMaster();
+
+var phaseOsc2 = new Tone.Oscillator({
+	frequency: 440,
+	volume: -12
+}).toMaster();
+
+//Oscillator toggles
+phaseSineToggle.on('*', function(data){
+	if (data.value == 1){
+		phaseOsc1.type = "sine";
+		phaseOsc2.type = "sine";
+		phaseOsc1.start();
+		phaseOsc2.start();
+		phaseTriToggle.set({
+			value: 0
+		}, false);
+	}else if (data.value == 0){
+		phaseOsc1.stop();
+		phaseOsc2.stop();
+	}
+});
+
+phaseTriToggle.on('*', function(data){
+	if (data.value == 1){
+		phaseOsc1.type = "triangle";
+		phaseOsc2.type = "triangle";
+		phaseOsc1.start();
+		phaseOsc2.start();
+		phaseSineToggle.set({
+			value: 0
+		}, false);
+	}else if (data.value == 0){
+		phaseOsc1.stop();
+		phaseOsc2.stop();
+	}
+});
+
+/*
+Phase slider function.  There are actually 2 oscillators playing at the 
+same time.  The slider changes the second oscillator's phase from 0&deg; - 180&deg; 
+*/
+phaseSlider.on('*', function(data){
+	var phase = Math.ceil(data.value * 180);
+	phaseOsc2.phase = phase;
+});
+				</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>Beating</h3>
+				<div class="gui">
+					<canvas id="beatToggle" nx="toggle"></canvas>
+					<canvas id="beatFreqNumber" nx="number"></canvas>
+				</div><br>
+				<div id="oscilloscope4" class="scope"></div>
+			</td>
+			<td>
+				<pre class="brush: js">
+/*
+When 2 tones are very close together in frequency, they will produce a phenomenon known as beating.
+The beating frequency is equivalent to the difference in frequency between the two tones.
+*/  
+var beatOsc1 = new Tone.Oscillator({
+	type: "sine",
+	frequency: 440,
+	volume: -12
+}).toMaster();
+
+var beatOsc2 = new Tone.Oscillator({
+	type: "sine",
+	frequency: 441,
+	volume: -12
+}).toMaster();
+
+beatFreqNumber.on('*', function(data){
+	beatOsc2.frequency.value = beatOsc1.frequency.value + data.value;
+});
+				</pre>
+			</td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript" src="../javascripts/SoundBasics.js"></script>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
