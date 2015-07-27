@@ -1,0 +1,31 @@
+//Spelling chords
+a=Pluck({maxVoices:4})
+
+a.chord('C4') //Default Maj triad
+a.chord('C4maj')//Maj7
+a.chord('C4min')//triad
+a.chord('C4min7')
+a.chord(['c4','eb4','g4','b4']) //Spy Chord
+a.chord('C47')//Dominant 7th
+a.chord('C4min9')
+a.chord('C4aug')
+a.chord('C4dim')
+a.chord('C4power')
+a.chord('C4maj7')
+
+
+b=Arp('c2',1/8,'updown',4)
+b.target=a
+/*Arp is similar to a.note.seq()
+.mult & .pattern cannot be set outside of original
+instance
+up, down, updown (no repeats)
+NO Downup?, updown2 (repeats)
+*/
+b.chord.seq(['C2power','C27','F2power','F2min'],1/2)
+b.speed=1/32 //SHRED!!!!!
+c=Flanger()
+d=Chorus()
+
+a.fx.add(c,d)
+a.fx.remove()
