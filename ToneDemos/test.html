@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>ConsoleTest</title>
+    <script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
+</head>
+<body>
+    <script id="ToneCode" type="text/javascript">
+
+    var noteArray = ["C#2", "D#2","F#2", "G#2", "A#2", "C#3", "D#3","F#3", "G#3", "A#3"];
+
+    var durArray = [.1, .2, .1, .4, .8, 1.0;
+
+    var synth = new Tone.MonoSynth().toMaster();
+
+
+      /*
+      {
+    	"oscillator" : {
+    		"type" : "sine"
+     },
+     "envelope" : {
+     	"attack" : .1,
+      "delay" : .2,
+      "sustain" : 1,
+      "release" : .4
+    },
+     "frequency" : "C4"
+
+    }).toMaster();
+    */
+
+   //synth.triggerAttack();
+
+
+/*
+   for(var i = 0; i < 10; i ++){
+    synth.triggerAttackRelease(noteArray[Math.floor(Math.random()*noteArray.length)], 2);
+    console.log("playing note", i);
+    delay(2);
+  }
+
+  */
+
+
+  var i = 1;                     //  set your counter to 1
+  var playNote, playDur;
+
+function myLoop () {           //  create a loop function
+   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+      playNote = noteArray[Math.floor(Math.random()*noteArray.length)];
+      playDur = durArray[Math.floor(Math.random()*durArray.length)];
+      console.log(playNote, playDur);
+      synth.triggerAttackRelease(playNote, playDur);
+
+      i++;                     //  increment the counter
+      if (i < 30) {            //  if the counter < 10, call the loop function
+         myLoop();             //  ..  again which will trigger another
+      }                        //  ..  setTimeout()
+   }, playDur * 1000 + 10)
+}
+
+myLoop();
+
+
+    </script>
+</body>
+</html>
