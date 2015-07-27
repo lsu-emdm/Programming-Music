@@ -12,21 +12,21 @@
 		.gui {
 			white-space: nowrap;
 		}
-		
+
 		table {
 			border: 1px solid black;
 		}
-		
+
 		td {
 			vertical-align: top;
 			border: 1px dotted black;
 			padding-right: 20px;
 		}
 	</style>
-	
+
 	<link href="shCore.css" rel="stylesheet" type="text/css" />
 	<link href="shThemeDefault.css" rel="stylesheet" type="text/css" />
-	
+
 	<script type="text/javascript" src="Tone.min.js"></script>
 	<script type="text/javascript" src="nexusUI.js"></script>
 	<script type="text/javascript" src="shCore.js"></script>
@@ -51,7 +51,7 @@
 			<td>
 				<pre class="brush: js">
 var sineOsc = new Tone.Oscillator({
-	frequency: 440, 
+	frequency: 440,
 	type: "sine",
 	volume: -12
 }).toMaster();
@@ -65,16 +65,25 @@ sineToggle.on('*', function(data){
 	}
 });
 
+//Set initial slider values
+sineFreqSlider.set({
+	value: 0.330
+}, true);
+
+sineVolSlider.set({
+	value: 0.8
+}, true);
+
 //Frequency slider function
 sineFreqSlider.on('*', function(data){
 	//Scale and offset
-	var frequency = data.value * 1000 + 100; 
+	var frequency = data.value * 1000 + 100;
 	sineOsc.frequency.value = frequency;
 });
 
 //Volume slider function
 sineVolSlider.on('*', function(data){
-	/*Trickier scale and offset (0-1 mapped to -60-0).  Math.ceil is a built-in 
+	/*Trickier scale and offset (0-1 mapped to -60-0).  Math.ceil is a built-in
 	JS function for rounding.*/
 	var volume = Math.ceil((data.value * -1 + 1) * -60);
 	sineOsc.volume.value = volume;
@@ -93,17 +102,21 @@ sineVolSlider.on('*', function(data){
 			</td>
 			<td>
 				<pre class="brush: js">
-				
+
 var sawOsc = new Tone.Oscillator({
 	frequency: 440,
 	volume: -12
 }).toMaster();
 
-/* 
+sawPartialNumber.set({
+	value: 1
+}, true);
+
+/*
 Sawtooth partial selector function.  Tone.js has
-built in functionality that allows us to specify how many 
-overtones (partials) the wave will have. 
-*/ 
+built in functionality that allows us to specify how many
+overtones (partials) the wave will have.
+*/
 sawPartialNumber.on('*', function(data){
 if (data.value >= 1){
 		sawOsc.type = "sawtooth" + (data.value + 1);
@@ -135,6 +148,10 @@ var phaseOsc2 = new Tone.Oscillator({
 	frequency: 440,
 	volume: -12
 }).toMaster();
+
+phaseSlider.set({
+	value: 0
+}, true);
 
 //Oscillator toggles
 phaseSineToggle.on('*', function(data){
@@ -168,8 +185,8 @@ phaseTriToggle.on('*', function(data){
 });
 
 /*
-Phase slider function.  There are actually 2 oscillators playing at the 
-same time.  The slider changes the second oscillator's phase from 0&deg; - 180&deg; 
+Phase slider function.  There are actually 2 oscillators playing at the
+same time.  The slider changes the second oscillator's phase from 0&deg; - 180&deg;
 */
 phaseSlider.on('*', function(data){
 	var phase = Math.ceil(data.value * 180);
@@ -192,7 +209,7 @@ phaseSlider.on('*', function(data){
 /*
 When 2 tones are very close together in frequency, they will produce a phenomenon known as beating.
 The beating frequency is equivalent to the difference in frequency between the two tones.
-*/  
+*/
 var beatOsc1 = new Tone.Oscillator({
 	type: "sine",
 	frequency: 440,
@@ -205,6 +222,10 @@ var beatOsc2 = new Tone.Oscillator({
 	volume: -12
 }).toMaster();
 
+beatFreqNumber.set({
+	value: 1
+}, true);
+
 beatFreqNumber.on('*', function(data){
 	beatOsc2.frequency.value = beatOsc1.frequency.value + data.value;
 });
@@ -212,9 +233,9 @@ beatFreqNumber.on('*', function(data){
 			</td>
 		</tr>
 	</table>
-	
+
 	<script type="text/javascript" src="SoundBasics.js"></script>
-	
+
 	<script type="text/javascript">
 		SyntaxHighlighter.all()
 	</script>
