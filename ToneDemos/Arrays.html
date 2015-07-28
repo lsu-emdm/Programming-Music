@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>ConsoleTest</title>
+    <script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
+</head>
+<body>
+    <script id="ToneCode" type="text/javascript">
+
+    var noteArray = ["C#2", "D#2","F#2", "G#2", "A#2", "C#3", "D#3","F#3", "G#3", "A#3"]; // create an array of notes
+
+    var durArray = [.1, .2, .1, .4, .8, 1.0; // create an array of durations (SECONDS)
+
+    var synth = new Tone.MonoSynth().toMaster(); // create a MonoSynth Instrument
+
+    var i = 0;                     //  set your counter to 1
+    var playNote, playDur;         //  variables will helps us see which pitches and durations are selected
+
+    function myLoop () {           //  create a loop function
+      setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+          playNote = noteArray[Math.floor(Math.random()*noteArray.length)];
+          playDur = durArray[Math.floor(Math.random()*durArray.length)];
+          // console.log(playNote, playDur);
+          synth.triggerAttackRelease(playNote, playDur);
+          i++;                     //  increment the counter
+          if (i < 30) {            //  if the counter < 10, call the loop function
+             myLoop();             //  ..  again which will trigger another
+          }                        //  ..  setTimeout()
+       }, playDur * 1000 + 10)
+    }
+    myLoop();
+
+    </script>
+</body>
+</html>

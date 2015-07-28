@@ -1,21 +1,19 @@
 
 # Intro to Musical Coding with Tone.js :musical_note:
+This page is written in Markdown and can be viewed within Atom. To open view as Markdown in Atom press (shift+control+m).
+
 [Link to this page](http://lsu-emdm.github.io/Programming-Music/Intro-to-Tone.md): http://lsu-emdm.github.io/Programming-Music/Intro-to-Tone.md
 
 [Weblink to Tone.js](http://cdn.tonejs.org/latest/Tone.min.js): http://cdn.tonejs.org/latest/Tone.min.js
 
 
-This page is written in Markdown and can be viewed within Atom. To open view as Markdown in Atom press (shift+control+m).
-
 ## Concepts Covered
 - Tone.js
 - Object Orienting Programming
 - Javascript: Objects, Class, Instance, Members/Properties, Methods, Functions, Returns, Console
-- Conditionals: loops (for, while, if, else)
 
 ## Examples in Tone.js
-[Blocks:](htt://somewhere.com)
-
+[Blocks chords](htt://somewhere.com)
 
 ## Our Tools
 ### 1.	Atom - our code editor
@@ -31,7 +29,7 @@ When we code, we use debugging tools to help us (the coders) check for problems 
 We will create a page within Atom.
 1. Open Atom which is in the Applications folder (maybe on your dock).
 2. Click File > New File to create a new file. (command + n) will also create a new file.
-3. Copy the code below and paste in the new file:
+3. Copy the code below and paste in the new file: 
 ```html
 <!DOCTYPE html>
 <head>
