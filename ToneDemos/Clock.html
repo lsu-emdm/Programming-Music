@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock Demo</title>
+
+		<script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
+</head>
+<body>
+
+	<script id="ToneCode" type="text/javascript">
+
+
+	// New instance of Clock object, we label it 'clock'.
+	// And we are setting the callback to 1 second
+	//the callback will be invoked approximately once a second
+	//and will print the time exactly once a second apart.
+	var clock = new Tone.Clock(1, function(time){
+		console.log('beat', time, '\n');
+	});
+
+
+	// Start the clock! (Immediately)
+	clock.start();
+
+	// Start the clock 10 seconds after load
+	//clock.start(10); // +10 also works
+
+
+	// Stop the clock 10 seconds after load
+	clock.stop(10); // stop 10 seconds from load
+
+	/* Try to start and stop the clock
+	clock.start(?);
+
+	clock.stop(?);
+	*/
+
+	// clear some memory
+	// clock.dispose();
+
+	</script>
+
+
+
+</body>
+</html>

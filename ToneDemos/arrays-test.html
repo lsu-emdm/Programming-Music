@@ -1,0 +1,24 @@
+<script>
+var noteArray = ["F#5","F5","F#5","F5","F#5","C#5", "E5", "D5", "B4"];
+
+var durArray = [.5, .5, .5, .5, .5, .5, .5, .5, 1.0];
+
+
+
+setTimeout(
+
+		function loop() {
+			for (i = 0; i < noteArray.length; i++) {
+			var playNote = noteArray[Math.floor(Math.random() * noteArray.length)];
+			var playDur = durArray[Math.floor(Math.random() * durArray.length)];
+			console.log (playNote, playDur);
+		}
+	}
+		, 1000);
+
+
+setTime(function, time);
+
+
+
+</script>

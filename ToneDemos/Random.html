@@ -1,0 +1,34 @@
+<head>
+    <title>ConsoleTest</title>
+    <script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
+</head>
+<body>
+  <button></button>
+
+  <script id="RandomCode" type="text/javascript">
+
+  // function that will generate a random number between two given integers
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  // a loop that runs 10 times
+  for (i = 0; i < 10; i++){
+    var randomResult = getRandomInt(2, 200);
+    console.log(randomResult);
+  }
+
+  // what is one way to consolidate the function and loop?
+  function loopRandomInt(min, max, loop) {
+    for (i = 0; i < loop; i++) {
+      randomResult = Math.floor(Math.random() * (max - min)) + min;
+      console.log("second loop:", randomResult, i);
+    }
+    return randomResult;
+  }
+
+  loopRandomInt(-30, -1, 10); // random numbers between -30 and -1, 10 times
+
+  </script>
+</body>
+</html>

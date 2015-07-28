@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oscillator</title>
+
+		<script type="text/javascript" src="../Tone/Tone.js"></script>
+</head>
+<body>
+
+	<script id="OscillatorCode" type="text/javascript">
+	// Let's create a single oscillator with a frequency of 800 and a waveform of sine
+
+	// Let's be a little more exacting and create a new instance
+	// with frequency 800 and connect it to the master, and start
+	//var osc = new Tone.Oscillator(440, "sine").toMaster().start();
+
+	// try switch to a different wave form:
+
+	var synth = new Tone.MonoSynth({
+		"oscillator" : {
+			"type" : "triangle"
+	 },
+	 "envelope" : {
+	 		"attack" : .8,
+			"decay": 0.1,
+			"sustain": .2,
+			"release": .2
+	 }
+	}).toMaster();
+
+
+
+	// control pitch and duration now
+	synth.triggerAttackRelease("C4", 2);
+
+
+
+
+
+	</script>
+</body>
+</html>

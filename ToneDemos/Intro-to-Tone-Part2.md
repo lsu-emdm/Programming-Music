@@ -16,7 +16,10 @@ var synth = new Tone.MonoSynth({
 		"type" : "square"
  },
  "envelope" : {
- 	"attack" : 0.1
+		"attack" : 0.1,
+		"decay": 0.1,
+		"sustain": 0.9,
+		"release": 1
  }
 }).toMaster();
 synth.triggerAttackRelease("C4", "8n");
@@ -29,14 +32,17 @@ What did you hear?
 Let's dissect the code and figure out what is happening AND how to change things.
 
 ```javascript
- var synth = new Tone.MonoSynth({
+var synth = new Tone.MonoSynth({
 	"oscillator" : {
 		"type" : "square"
  },
  "envelope" : {
- 	"attack" : 0.1
+		"attack" : 0.1,
+		"decay": 0.1,
+		"sustain": 0.9,
+		"release": 1
  }
-}
+}).toMaster();
 ```
 
 The first half the code is a creating a new instance of ```Tone.MonoSynth```.
@@ -107,3 +113,61 @@ Before we go much further, let's discuss a new concept: ADSR
 Above we show a graphic of ADSR envelope.
 - What is an envelope in real life?
 - What is an envelope in musical programming?
+
+#### Change some parameters of the oscillator
+
+``` javascript
+var synth = new Tone.MonoSynth({
+	"oscillator" : {
+		"type" : "square"
+ },
+ "envelope" : {
+		"attack" : 0.1,
+		"decay": 0.1,
+		"sustain": 0.9,
+		"release": 1
+ }
+}).toMaster();
+synth.triggerAttackRelease("C4", "8n");
+```
+
+# Use a different synthesizer: (http://tonejs.org/docs/)
+
+```javascript
+var amSynth = new Tone.AMSynth().toMaster();
+//synth.triggerAttackRelease("C4", "4n");
+
+var drumSynth = new Tone.DrumSynth().toMaster();
+// synth.triggerAttackRelease("C2", "8n");
+
+var plucky = new Tone.PluckSynth().toMaster();
+// plucky.triggerAttack("C4"); // modeled with instrument no controllable sustain
+
+var fmSynth = new Tone.FMSynth().toMaster();
+// fmSynth.triggerAttackRelease("C5", "4n");
+
+```
+## We will spend more time exploring these different synths (later)
+
+#### Let's wrap a PolySynth around one of our Synthesizer instruments to alow for multiple instruments
+
+```javascript
+
+    var poly = new Tone.PolySynth(6, Tone.FMSynth).toMaster();
+
+    poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 0);
+		poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 1);
+		poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 2);
+
+		poly.triggerAttackRelease(["D4", "A4", "D5", "F5"], .5, 3);
+
+		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 4);
+		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 5);
+		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 6);
+
+		poly.triggerAttackRelease(["G3", "A4", "C5", "E5"], .7, 7);
+```
+
+
+
+### WHat is a more elagant way to code this? What can we do with arrays?
