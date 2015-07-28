@@ -1,5 +1,6 @@
 ---
 title: Document Center
+published: true
 ---
 
 # Intro to Musical Coding with Tone.js :musical_note:
