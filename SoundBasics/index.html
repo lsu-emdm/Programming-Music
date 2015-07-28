@@ -77,15 +77,15 @@ sineVolSlider.set({
 //Frequency slider function
 sineFreqSlider.on('*', function(data){
 	//Scale and offset
-	var frequency = data.value * 1000 + 100;
+	var frequency = data.value * 900 + 100;
 	sineOsc.frequency.value = frequency;
 });
 
 //Volume slider function
 sineVolSlider.on('*', function(data){
-	/*Trickier scale and offset (0-1 mapped to -60-0).  Math.ceil is a built-in
+	/*Another scale and offset (0-1 mapped to -60-0).  Math.floor is a built-in
 	JS function for rounding.*/
-	var volume = Math.ceil((data.value * -1 + 1) * -60);
+	var volume = Math.floor(data.value * 60 - 60);
 	sineOsc.volume.value = volume;
 });
 				</pre>
@@ -189,7 +189,7 @@ Phase slider function.  There are actually 2 oscillators playing at the
 same time.  The slider changes the second oscillator's phase from 0&deg; - 180&deg;
 */
 phaseSlider.on('*', function(data){
-	var phase = Math.ceil(data.value * 180);
+	var phase = Math.floor(data.value * 180);
 	phaseOsc2.phase = phase;
 });
 				</pre>
