@@ -6,22 +6,19 @@
 	<body>
 		<script id="ToneCode" type="text/javascript">
 
-		Tone.Transport.bpm.value = 70;
-
     var poly = new Tone.PolySynth(6, Tone.FMSynth).toMaster();
 
     poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 0);
 		poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 1);
 		poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 2);
 
-		poly.triggerAttackRelease(["D4", "A4", "D5", "F5"], .5, 3);
+		poly.triggerAttackRelease(["D4", "A4", "D5", "F5"], .7, 3);
 
 		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 4);
 		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 5);
 		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 6);
 
 		poly.triggerAttackRelease(["G3", "A4", "C5", "E5"], .7, 7);
-
 
 		</script>
 </body>

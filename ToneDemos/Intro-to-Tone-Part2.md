@@ -149,7 +149,7 @@ var fmSynth = new Tone.FMSynth().toMaster();
 ```
 ## We will spend more time exploring these different synths (later)
 
-#### Let's wrap a PolySynth around one of our Synthesizer instruments to alow for multiple instruments
+#### Let's wrap a PolySynth around one of our Synthesizer instruments to allow for multiple
 
 ```javascript
 
@@ -159,7 +159,7 @@ var fmSynth = new Tone.FMSynth().toMaster();
 		poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 1);
 		poly.triggerAttackRelease(["C4", "G4", "C5", "E5"], .7, 2);
 
-		poly.triggerAttackRelease(["D4", "A4", "D5", "F5"], .5, 3);
+		poly.triggerAttackRelease(["D4", "A4", "D5", "F5"], .7, 3);
 
 		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 4);
 		poly.triggerAttackRelease(["A3", "A4", "C5", "E5"], .7, 5);
@@ -169,5 +169,4 @@ var fmSynth = new Tone.FMSynth().toMaster();
 ```
 
 
-
-### WHat is a more elagant way to code this? What can we do with arrays?
+### What is a more elegant way to code this? What can we do with arrays?
