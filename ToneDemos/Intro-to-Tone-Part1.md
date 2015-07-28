@@ -1,5 +1,5 @@
 ---
-title: Document Center
+title: Intro to Tone.js
 published: true
 ---
 
