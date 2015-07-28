@@ -12,34 +12,79 @@
 	// An instance of the Transport is created when the library is initialized
 	// singleton Tone.Transport()
 
+	var synth = new Tone.MonoSynth({
+		"oscillator" : {
+			"type" : "square"
+		},
+		"envelope" : {
+			"attack" : 0.1
+		}
+	}).toMaster();
+	//synth.triggerAttackRelease("C4", "8n");
+
+	var synth2 = new Tone.MonoSynth({
+		"oscillator" : {
+			"type" : "triangle"
+		},
+		"envelope" : {
+			"attack" : 0.1
+		}
+	}).toMaster();
+
 	//Set tempo
 	Tone.Transport.bpm.value = 70;
+
 
 	//set the bpm to 120 right away
 	//Tone.Transport.bpm.value = 120;
 	//ramp to a bpm of 240 over 5 seconds
-	//Tone.Transport.bpm.rampTo(240, 5);
+
+	Tone.Transport.setTimeout(function(time) {
+			Tone.Transport.bpm.rampTo(240, 5);
+	}, 10);
+
+
+//	Tone.Transport.bpm.rampTo(240, 5);
 
 	// There are three ways to set time events with Tone.Transport.
 	// 1. Tone.Transport.setInterval -- schedule a repeating event at the specific interval
-	// 2. Tone.Transport.setTimeout -- set a single event in the future relative to the Transport position. 
-	// 3. Tone.Transport.setTimeline -- schedule an event relative to the start of the timeline. 
+	// 2. Tone.Transport.setTimeout -- set a single event in the future relative to the Transport position.
+	// 3. Tone.Transport.setTimeline -- schedule an event relative to the start of the timeline.
 
 	//repeated event every 8th note
 	Tone.Transport.setInterval (function(time){
 		//do somethign with the time
 		console.log("8th note!");
-	}, "8n");
+		synth.triggerAttackRelease("C4", "8n");  //the "8n" doesn't tell when, but duration
 
-	Tone.Transport.start();
+	}, "8n");  // the "8n" here is when
+
+
+	Tone.Transport.setInterval (function(time){
+		//do somethign with the time
+		console.log("8th note!");
+		synth2.triggerAttackRelease("A4", "8n");  //the "8n" doesn't tell when, but duration
+	}, "4n");
+	Tone.Transport.start(0);
+
+
+	Tone.Transport.setInterval (function(time){
+		//do somethign with the time
+		console.log("quarter note!");
+		synth2.triggerAttackRelease("A4", "8n");  //the "8n" doesn't tell when, but duration
+	}, "4n");
+
 
 	//this will start an oscillator 5 seconds from now
+
+	/*
 	Tone.Transport.setTimeout(function(time){
-		osc.start(time);
+		//osc.start(time);
 	}, 5);
-	
-	Tone.Transport.start();
-	
+	*/
+
+	//Tone.Transport.start();
+
 	// this is will start an oscillator 5 from the start of the timeline
 	// *** See Timeline page
 	//Tone.Transport.setTimeline
@@ -49,7 +94,7 @@
 	//Tone.Transport.start();
 
 	// Start the Transport at a later time
-	Tone.Transport.start('8n');
+	//Tone.Transport.start('8n');
 
 	</script>
 

@@ -12,14 +12,14 @@
 
     var synth = new Tone.MonoSynth().toMaster(); // create a MonoSynth Instrument
 
-    var i = 1;                     //  set your counter to 1
+    var i = 0;                     //  set your counter to 1
     var playNote, playDur;         //  variables will helps us see which pitches and durations are selected
 
     function myLoop () {           //  create a loop function
       setTimeout(function () {    //  call a 3s setTimeout when the loop is called
           playNote = noteArray[Math.floor(Math.random()*noteArray.length)];
           playDur = durArray[Math.floor(Math.random()*durArray.length)];
-          console.log(playNote, playDur);
+          // console.log(playNote, playDur);
           synth.triggerAttackRelease(playNote, playDur);
           i++;                     //  increment the counter
           if (i < 30) {            //  if the counter < 10, call the loop function

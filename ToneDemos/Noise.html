@@ -8,7 +8,7 @@
 <body>
 
 	<script id="NoiseCode" type="text/javascript">
-	// Noise generator: 
+	// Noise generator:
 	// MEMBERS: .type {"Pink, White, Brown"}
 	// .onended callback involved when source is done playing
 	// .volume = output in DB
@@ -20,7 +20,7 @@
 	// Shape the noise with a filter
 	var autoFilter = new Tone.AutoFilter( {
 		"frequency" : "8m",
-		"min" : 800, 
+		"min" : 800,
 		"max" : 15000
 	}).connect(Tone.Master);
 
@@ -38,14 +38,11 @@
 	// a new instance of brown noise generator, name it noiseBrown
 
 	var noiseBrown = new Tone.Noise("brown").start();
-	
+
 	// connect the brown noise generator to master out
 
 	noiseBrown.connect(Tone.Master);
-
 	*/
-
-
 
 	</script>
 

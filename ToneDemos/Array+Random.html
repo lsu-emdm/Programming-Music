@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <title>ConsoleTest</title>
+    <script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
+</head>
+<body>
+  <script id="Array+Random" type="text/javascript">
+
+  var noteArray = ["F#5","F5","F#5","F5","F#5","C#5", "E5", "D5", "B4"];
+
+  var durArray = [.5, .5, .5, .5, .5, .5, .5, .5, 1.0];
+
+  var synth = new Tone.MonoSynth().toMaster();
+
+  var i = 0;                     //  set your counter to 1
+
+  var playNote, playDur;
+
+  function myLoop () {           //  create a loop function
+     setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+        playNote = noteArray[i];
+        playDur = durArray[i];
+        console.log(playNote, playDur);
+        synth.triggerAttackRelease(playNote, playDur);
+
+        i++;                     //  increment the counter
+        if (i < 9) {             //  if the counter < 10, call the loop function
+           myLoop();             //  ..  again which will trigger another
+        }                        //  ..  setTimeout()
+     }, playDur * 1000 + 10)
+  }
+
+  myLoop();
+
+  function myRandomLoop () {     //  create a loop function
+     setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+        playNote = noteArray[Math.floor(Math.random()*noteArray.length)];
+        playDur = durArray[Math.floor(Math.random()*durArray.length)];
+        console.log(playNote, playDur);
+        synth.triggerAttackRelease(playNote, playDur);
+
+        i++;                     //  increment the counter
+        if (i < 30) {            //  if the counter < 10, call the loop function
+           myLoop();             //  ..  again which will trigger another
+        }                        //  ..  setTimeout()
+     }, playDur * 1000 + 10)
+  }
+
+  myRandomLoop();
+
+  </script>
+</body>
+</html>
