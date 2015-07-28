@@ -1,3 +1,9 @@
+--- 
+title: Intro to Tone.js Part2
+published: true
+---
+
+
 # Intro-to-Tone-Part2.md
 Let's start making some sound. For this next lesson, we will focus on
 - creating sound
