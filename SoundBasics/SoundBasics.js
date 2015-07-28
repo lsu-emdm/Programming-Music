@@ -9,7 +9,7 @@ scope3.connect(Tone.Master);
 scope4.connect(Tone.Master);
 
 var sineOsc = new Tone.Oscillator({
-	frequency: 440, 
+	frequency: 440,
 	type: "sine",
 	volume: -12
 }).connect(scope1);
@@ -41,43 +41,42 @@ var beatOsc2 = new Tone.Oscillator({
 	volume: -12
 }).connect(scope4);
 
-
 nx.onload = function(){
 	nx.sendsTo("js");
-	
+
 	nx.colorize("fill", "#B4AEA2");
 	nx.colorize("accent", "#fccf22");
-	
+
 	sineFreqSlider.hslider = true;
 	sineFreqSlider.draw();
-	
+
 	sawPartialNumber.decimalPlaces = 0;
-	
+
 	phaseSlider.hslider = true;
 	phaseSlider.draw();
-	
+
 	beatFreqNumber.decimalPlaces = 0;
-	
+
 	sineFreqSlider.set({
 		value: 0.330
 	}, true);
-	
+
 	sineVolSlider.set({
 		value: 0.8
 	}, true);
-	
+
 	sawPartialNumber.set({
 		value: 1
 	}, true);
-	
+
 	phaseSlider.set({
 		value: 0
 	}, true);
-	
+
 	beatFreqNumber.set({
 		value: 1
 	}, true);
-	
+
 	sineToggle.on('*', function(data){
 		if (data.value == 1){
 			sineOsc.start();
@@ -85,33 +84,33 @@ nx.onload = function(){
 			sineOsc.stop();
 		}
 	});
-	
+
 	sineFreqSlider.on('*', function(data){
-		var frequency = data.value * 1000 + 100;
+		var frequency = data.value * 900 + 100;
 		sineOsc.frequency.value = frequency;
 		document.getElementById("freqLabel").innerHTML = "Frequency: " + frequency + "Hz";
 	});
-	
+
 	sineVolSlider.on('*', function(data){
-		var volume = Math.ceil((data.value * -1 + 1) * -60);
+		var volume = Math.floor(data.value * 60 - 60);
 		sineOsc.volume.value = volume;
 		document.getElementById("volLabel").innerHTML = "Level: " + volume + " dB";
 	});
-	
+
 	sawToggle.on('*', function(data){
 		if (data.value == 1){
-			sawOsc.start();			
+			sawOsc.start();
 		}else if (data.value == 0){
 			sawOsc.stop();
 		}
 	});
-	
+
 	sawPartialNumber.on('*', function(data){
 		if (data.value >= 1){
 			sawOsc.type = "sawtooth" + (data.value + 1);
 		}
 	});
-	
+
 	phaseSineToggle.on('*', function(data){
 		if (data.value == 1){
 			phaseOsc1.type = "sine";
@@ -126,7 +125,7 @@ nx.onload = function(){
 			phaseOsc2.stop();
 		}
 	});
-	
+
 	phaseTriToggle.on('*', function(data){
 		if (data.value == 1){
 			phaseOsc1.type = "triangle";
@@ -143,11 +142,11 @@ nx.onload = function(){
 	});
 
 	phaseSlider.on('*', function(data){
-		var phase = Math.ceil(data.value * 180);
+		var phase = Math.floor(data.value * 180);
 		phaseOsc2.phase = phase;
 		document.getElementById("phaseLabel").innerHTML = phase + "&deg; Out of Phase";
 	});
-	
+
 	beatToggle.on('*', function(data){
 		if (data.value == 1){
 			beatOsc1.start();
@@ -157,7 +156,7 @@ nx.onload = function(){
 			beatOsc2.stop();
 		}
 	});
-	
+
 	beatFreqNumber.on('*', function(data){
 		beatOsc2.frequency.value = beatOsc1.frequency.value + data.value;
 	});
