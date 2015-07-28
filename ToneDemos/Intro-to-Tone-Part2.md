@@ -1,5 +1,5 @@
---- 
-title: Intro to Tone.js Part2
+---
+title: Intro to Tone.js part 2
 published: true
 ---
 
