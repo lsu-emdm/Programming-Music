@@ -4,9 +4,9 @@
 
 ## Andrew Sorenson
 
-[The Concert Programmer](https://www.youtube.com/watch?v=yY1FSsUV-8c) a keynote for the OSCON 2014 conference.
-[Coding Music](https://www.youtube.com/watch?v=5DuVuoe-_UQ) presentation for the Pioneers 2014 conference.
-[Compute Music Now](https://www.youtube.com/watch?v=GSGKEy8vHqg) informance at TEDxQUT
+- [The Concert Programmer](https://www.youtube.com/watch?v=yY1FSsUV-8c) a keynote for the OSCON 2014 conference.
+- [Coding Music](https://www.youtube.com/watch?v=5DuVuoe-_UQ) presentation for the Pioneers 2014 conference.
+- [Compute Music Now](https://www.youtube.com/watch?v=GSGKEy8vHqg) informance at TEDxQUT
 
 [Andrew Sorenson on Youtube](https://www.youtube.com/watch?v=bq-260NUw5o&list=PL_eJ0XdLbWzzq_03wTIMVew1gByub_wKS)
 
