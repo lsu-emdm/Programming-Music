@@ -1,3 +1,7 @@
+---
+title: Examples in Live Coding
+---
+
 ## Live Coding 
 
 [Toplap](http://toplap.org) is a community around live coding musical experiences.
