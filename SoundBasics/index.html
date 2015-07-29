@@ -127,6 +127,46 @@ if (data.value >= 1){
 		</tr>
 		<tr>
 			<td>
+				<h3>Filtering a Sawtooth Wave</h3>
+				<div class="gui">
+					<canvas id="filterToggle" nx="toggle"></canvas>
+					<canvas id="cutoffFrequencyDial" nx="dial"></canvas>
+				</div>
+				<p id="cutoffLabel">Cutoff Frequency: 5000 Hz</p>
+				<div id="oscilloscope5" class="scope"></div>
+			</td>
+			<td>
+				<pre class="brush: js">
+/*
+Using an oscillator with a lot of harmonics (like a sawtooth wave) and
+removing some of the high harmonics using a lowpass filter is probably the
+most common form of synthesis.
+*/
+var lowPassFilter = new Tone.Filter({
+	type: "lowpass",
+	frequency: 5000,
+	Q: 10
+}).toMaster();
+
+var filterOsc = new Tone.Oscillator({
+	type: "sawtooth",
+	frequency: 440,
+	volume: -12
+}).connect(lowPassFilter);
+
+cutoffFrequencyDial.set({
+	value: 1
+}, true);
+
+cutoffFrequencyDial.on('*', function(data){
+	var cutoff = Math.floor(data.value * 5000);
+	lowPassFilter.frequency.value = cutoff;
+});
+				</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
 				<h3>Phase Cancellation</h3>
 				<pre> Sine  Triangle</pre>
 				<div class="gui">
@@ -228,6 +268,52 @@ beatFreqNumber.set({
 
 beatFreqNumber.on('*', function(data){
 	beatOsc2.frequency.value = beatOsc1.frequency.value + data.value;
+});
+				</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>Frequency Modulation</h3>
+				<div class="gui">
+					<canvas id="fmToggle" nx="toggle"></canvas>
+					<canvas id="fmPosition" nx="position"></canvas>
+				</div><br>
+				<div id="oscilloscope6" class="scope"></div>
+			</td>
+			<td>
+				<pre class="brush: js">
+//Fun with FM synthesis
+
+var fmSynth = new Tone.FMSynth({
+	harmonicity: 0,
+	modulationIndex: 0,
+	modulator: {
+		oscillator: {
+			type: "sine"
+		}
+	}
+}).toMaster();
+
+fmPosition.set({
+	x: 0,
+	y: 0
+}, true);
+
+fmToggle.on('*', function(data){
+	if (data.value == 1){
+		fmSynth.triggerAttack("A4");
+	}else if (data.value == 0){
+		fmSynth.triggerRelease();
+	}
+});
+
+fmPosition.on('*', function(data){
+	var index = data.y * 10;
+	var harmonicity = data.x * 3;
+
+	fmSynth.modulationIndex.value = index;
+	fmSynth.harmonicity.value = harmonicity;
 });
 				</pre>
 			</td>
