@@ -4,7 +4,9 @@ published: true
 ---
 
 
+
 [return to ProMusic2015](ProMusic2015)
+[Intro to Tone part 2](ToneDemos/Intro-to-Tone-Part2)
 
 # Intro to Musical Coding with Tone.js :musical_note:
 This page is written in Markdown and can be viewed within Atom. To open view as Markdown in Atom press (shift+control+m).
@@ -111,6 +113,7 @@ Create a new message to yourself. Experiment with these ideas below:
 - How can be reduce the number of lines of code but still achieve the same outcome?
 - Try solving a math equation:
 
+1)
     var addend1 = 20;
     var addend2 = 10;
     var solution = addend1 + addend2;
