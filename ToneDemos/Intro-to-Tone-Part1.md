@@ -6,12 +6,13 @@ published: true
 
 
 
+
 [return to ProMusic2015](ProMusic2015) | [Intro to Tone part 2](Intro-to-Tone-Part2)
 
 # Intro to Musical Coding with Tone.js :musical_note:
 This page is written in Markdown and can be viewed within Atom. To open view as Markdown in Atom press (shift+control+m).
 
-[Link to this page](http://lsu-emdm.github.io/Programming-Music/Intro-to-Tone.md): http://lsu-emdm.github.io/Programming-Music/Intro-to-Tone.md
+[Link to this page](http://lsu-emdm.github.io/Programming-Music/ToneDemos/Intro-to-Tone-Part1): http://lsu-emdm.github.io/Programming-Music/ToneDemos/Intro-to-Tone-Part1
 
 [Weblink to Tone.js](http://cdn.tonejs.org/latest/Tone.min.js): http://cdn.tonejs.org/latest/Tone.min.js
 
