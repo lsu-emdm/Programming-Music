@@ -41,7 +41,7 @@ We will create a page within Atom.
 2. Click File > New File to create a new file. (command + n) will also create a new file.
 3. Copy the code below and paste in the new file: 
 
-```html
+```
     <html>
       <head>
               <title>ConsoleTest</title>
