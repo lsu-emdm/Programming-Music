@@ -11,6 +11,11 @@ A mixture of science and the arts in a one-week camp designed for high schoolers
 
 Programming in javascript to live code music in a web browser. Students made their own web audio instruments in Chrome, Firefox and Safari. Music topics on composition, form, and notation were covered as groups formed to create live-coded musical performances. Final projects were presented and pieces performed at the concert at the conclusion of the week. 
 
+## Live Coding Examples
+A collection of live coding examples, some of which we watched during the week, others...
+
+[Live Coding](/Examples)
+
 ## Instruments
 All of these instruments were created by the students in class during the week.
 
