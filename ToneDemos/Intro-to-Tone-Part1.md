@@ -3,6 +3,7 @@ title: Intro to Tone.js
 published: true
 ---
 
+
 # Intro to Musical Coding with Tone.js :musical_note:
 This page is written in Markdown and can be viewed within Atom. To open view as Markdown in Atom press (shift+control+m).
 
@@ -20,12 +21,15 @@ This page is written in Markdown and can be viewed within Atom. To open view as 
 [Blocks chords](htt://somewhere.com)
 
 ## Our Tools
+
 ### 1.	Atom - our code editor
 We will be using Atom application to edit all our code.
 When you have written some code, be sure to save the code.
 When you want to view page, open that page with
+
 ### 2.	Chrome - our browser
 We will use Chrome to view our pages. Chrome will knows to interpret **Javascript**, the language we will be using with Node.js.
+
 ### 3.	Console - our debugging tool within Chrome
 When we code, we use debugging tools to help us (the coders) check for problems (bugs) within the code. If a portion or all of the code does not work, debugging methods will help us find (and solve those problems). When we are working with Tone.js this week, we will use the console to help us check on our code.
 
@@ -34,23 +38,23 @@ We will create a page within Atom.
 1. Open Atom which is in the Applications folder (maybe on your dock).
 2. Click File > New File to create a new file. (command + n) will also create a new file.
 3. Copy the code below and paste in the new file: 
-```html
-<html>
-<head>
-		<title>ConsoleTest</title>
-		<script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
-	</head>
-	<body>
-		<script id="ToneCode" type="text/javascript">
 
-		<!-- Your awesome code go here! >
+  <html>
+    <head>
+            <title>ConsoleTest</title>
+            <script type="text/javascript" src="http://cdn.tonejs.org/latest/Tone.min.js"></script>
+        </head>
+        <body>
+            <script id="ToneCode" type="text/javascript">
+    
+            <!-- Your awesome code go here! >
+    
+            // More awesome code!
+    
+            </script>
+    </body>
+  </html>
 
-		// More awesome code!
-
-		</script>
-</body>
-</html>
-```
 4. Save the file.
 5. Open the file in Chrome.
 6. What do you see? What do you hear?
@@ -81,19 +85,17 @@ We will create a page within Atom.
 A variable piece of data we want to use. A variable could be a value or name. As the word 'variable' suggests, the information assigned to it can change.
 
 Let's create a variable and **assign** something to it. Type out the lines below and be sure to capitalize the certain letters.
-```javascript
-var myName;
-var myName = "Nick";
-var myNeighborsName;
-myNeighborsName = "Danny";
-```
+
+  var myName;
+  var myName = "Nick";
+  var myNeighborsName;
+  myNeighborsName = "Danny";
+
 
 We've created two variables `myName` and `myNeighborsName`. Now, let's tell the browser's console to print those names. Add the following text:
 
-```javascript
-console.log(myName);
-console.log(myNeighborsName);
-```
+  console.log(myName);
+  console.log(myNeighborsName);
 
 What do you think will appear in the console? Did you notice we removed the "quotation marks" when we are calling a variable?
 
@@ -102,14 +104,15 @@ What happens when we use `console.log(myNeighborsName, myName);`   ?
 **EXPERIMENT ON YOUR OWN**: ( *3 minute exercise* )
 
 Create a new message to yourself. Experiment with these ideas below:
+
 - Try different variables.
 - How can be reduce the number of lines of code but still achieve the same outcome?
 - Try solving a math equation:
-```javascript
-var addend1 = 20;
-var addend2 = 10;
-var solution = addend1 + addend2;
-console.log(solution);
-```
+
+  var addend1 = 20;
+  var addend2 = 10;
+  var solution = addend1 + addend2;
+  console.log(solution);
+  
 - Try using different values or a different math operation (subtraction or multiplication).
 - Try purposely calling a variable you didn't create. What does console tell you?
