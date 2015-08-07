@@ -8,6 +8,14 @@ published: true
 
 # # Intro to Musical Coding with Tone.js (Part 5) :musical_note:
 
+## Example Code
+
+- [Oscillator](Oscillator.html)
+- [Noise](Noise.html)
+- [polySynth](polySynth.html)
+- [Clock](Clock.html)
+- [Transport](Transport.html)
+
 ## Concepts Covered
 - A ton of instruments!
 - OmniOscillator
