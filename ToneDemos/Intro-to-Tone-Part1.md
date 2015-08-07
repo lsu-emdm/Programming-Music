@@ -4,6 +4,8 @@ published: true
 ---
 
 
+[return to ProMusic2015](ProMusic2015)
+
 # Intro to Musical Coding with Tone.js :musical_note:
 This page is written in Markdown and can be viewed within Atom. To open view as Markdown in Atom press (shift+control+m).
 
