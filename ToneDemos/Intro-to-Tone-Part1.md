@@ -41,7 +41,6 @@ We will create a page within Atom.
 2. Click File > New File to create a new file. (command + n) will also create a new file.
 3. Copy the code below and paste in the new file: 
 
-```
     <html>
       <head>
               <title>ConsoleTest</title>
@@ -57,7 +56,7 @@ We will create a page within Atom.
               </script>
       </body>
     </html>
-```
+    
 
 4. Save the file.
 5. Open the file in Chrome.
