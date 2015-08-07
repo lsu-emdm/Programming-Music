@@ -101,8 +101,8 @@ Let's create a variable and **assign** something to it. Type out the lines below
 We've created two variables `myName` and `myNeighborsName`. Now, let's tell the browser's console to print those names. Add the following text:
 
 ```javascript
-    console.log(myName);
-    console.log(myNeighborsName);
+console.log(myName);
+console.log(myNeighborsName);
 ```
 
 What do you think will appear in the console? Did you notice we removed the "quotation marks" when we are calling a variable?
