@@ -4,6 +4,7 @@ published: true
 ---
 
 
+[return to ProMusic2015](ProMusic2015)
 
 ## Live Coding 
 
@@ -41,4 +42,3 @@ published: true
 LSU Laptop Orchestra of Louisiana performing [In Chuck](https://www.youtube.com/watch?v=-ZrmajoMxcE) by Stephen David Beck.
 
 (In class we talked a little about minimalism and Terry Riley's [In C]() upon which this piece was based.  We also discussed the aesthetic of [Gamelan music](https://www.youtube.com/watch?v=aeAxXWx1Omk) which this shares quite a bit.)
-
