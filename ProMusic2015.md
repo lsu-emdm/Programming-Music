@@ -16,6 +16,19 @@ A collection of live coding examples, some of which we watched during the week, 
 
 [Live Coding](Examples)
 
+## Tone.js
+
+[Intro to Tone 1](ToneDemos/Intro-to-Tone-Part1)
+[Intro to Tone 2](ToneDemos/Intro-to-Tone-Part2)
+[Intro to Tone 3](ToneDemos/Intro-to-Tone-Part3)
+[Intro to Tone 4](ToneDemos/Intro-to-Tone-Part4)
+[Intro to Tone 5](ToneDemos/Intro-to-Tone-Part5)
+
+## Audio Synthesis in Tone.js
+
+[Sound Basics](SoundBasics/)
+
+
 ## Instruments
 All of these instruments were created by the students in class during the week.
 
