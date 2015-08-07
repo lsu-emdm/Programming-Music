@@ -114,6 +114,7 @@ Create a new message to yourself. Experiment with these ideas below:
 - Try solving a math equation:
 
 1)
+
     var addend1 = 20;
     var addend2 = 10;
     var solution = addend1 + addend2;
