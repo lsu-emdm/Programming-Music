@@ -14,7 +14,7 @@ Programming in javascript to live code music in a web browser. Students made the
 ## Live Coding Examples
 A collection of live coding examples, some of which we watched during the week, others...
 
-[Live Coding](/Examples)
+[Live Coding](Examples)
 
 ## Instruments
 All of these instruments were created by the students in class during the week.
