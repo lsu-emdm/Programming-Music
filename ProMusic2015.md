@@ -3,9 +3,11 @@ title: ProMusic2015
 published: true
 ---
 
+
 ## Programming Music 2015
 
-[Programming Music 2015](https://www.cct.lsu.edu/ProMusic2015) 
+[Back to Github Pages](/)
+[Programming Music 2015 CCT Page](https://www.cct.lsu.edu/ProMusic2015) 
 
 A mixture of science and the arts in a one-week camp designed for high schoolers. Supported by the LSU Center for Computation & Technology as part of their Cultural Computing focus, this course incorporated computer programing into a musical performance.
 
