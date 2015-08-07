@@ -1,6 +1,9 @@
 ---
 title: Examples in Live Coding
+published: true
 ---
+
+
 
 ## Live Coding 
 
@@ -16,7 +19,20 @@ title: Examples in Live Coding
 
 ## Charlie Roberts
 
-## 
+- [Charlie Roberts' website](http://charlie-roberts.com/)
+- [Live Coding Performance](https://vimeo.com/80745664)
+- [Charlie Roberts: Gibbering at Algoraves](https://www.youtube.com/watch?v=2BIOINFSbMg) JS in Live Audiovisual Performances at the JSConf.Asia 2014.  (LSU is mentioned around the 33 minute mark!)
+
+- [Gibber Interface](http://gibber.mat.ucsb.edu/)
+
+
+## Thor Magnussen
+
+- [IXI Lang Performance](https://www.youtube.com/watch?v=04TcXlC9IBw)
+
+## David Ogborn
+
+- [Delay Study](https://www.youtube.com/watch?v=2gehI46oNvk)
 
 ## LSU Experimental Music & Digital Media
 
@@ -26,5 +42,3 @@ LSU Laptop Orchestra of Louisiana performing [In Chuck](https://www.youtube.com/
 
 (In class we talked a little about minimalism and Terry Riley's [In C]() upon which this piece was based.  We also discussed the aesthetic of [Gamelan music](https://www.youtube.com/watch?v=aeAxXWx1Omk) which this shares quite a bit.)
 
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
