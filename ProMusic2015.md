@@ -46,7 +46,7 @@ All of these instruments were created by the students in class during the week.
 - [Kody](http://braid.nexusosc.com/tonedemo.html?pm15_KodyC)
 - [Eugene](http://braid.nexusosc.com/tonedemo.html?promusic15_eugene)
 - [Nolan](http://braid.nexusosc.com/tonedemo.html?promusic15_nolan)
-- [Kenyon](http://braid.nexusosc.com/tonedemo.html?promusic15_kenyon
+- [Kenyon](http://braid.nexusosc.com/tonedemo.html?promusic15_kenyon)
 - [Aaron](http://braid.nexusosc.com/tonedemo.html?promusic15_Aaron)
 - [Sam](http://braid.nexusosc.com/tonedemo.html?pm15_sam_instrument)
 - [Skylar](http://braid.nexusosc.com/tonedemo.html?skylar)
