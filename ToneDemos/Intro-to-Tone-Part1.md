@@ -89,21 +89,15 @@ A variable piece of data we want to use. A variable could be a value or name. As
 
 Let's create a variable and **assign** something to it. Type out the lines below and be sure to capitalize the certain letters.
 
-```javascript
-
     var myName;
     var myName = "Nick";
     var myNeighborsName;
     myNeighborsName = "Danny";
 
-```
-
 We've created two variables `myName` and `myNeighborsName`. Now, let's tell the browser's console to print those names. Add the following text:
 
-```javascript
-console.log(myName);
-console.log(myNeighborsName);
-```
+    console.log(myName);
+    console.log(myNeighborsName);
 
 What do you think will appear in the console? Did you notice we removed the "quotation marks" when we are calling a variable?
 
@@ -117,12 +111,10 @@ Create a new message to yourself. Experiment with these ideas below:
 - How can be reduce the number of lines of code but still achieve the same outcome?
 - Try solving a math equation:
 
-```javascript
     var addend1 = 20;
     var addend2 = 10;
     var solution = addend1 + addend2;
     console.log(solution);
-```
 
 - Try using different values or a different math operation (subtraction or multiplication).
 - Try purposely calling a variable you didn't create. What does console tell you?
