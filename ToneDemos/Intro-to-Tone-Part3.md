@@ -3,7 +3,8 @@ title: Intro to Tone Part 3
 published: true
 ---
 
-[return to ProMusic2015](ProMusic2015) || [Intro to Tone part 2](Intro-to-Tone-Part2) || [Intro to Tone part 4](Intro-to-Tone-Part4)
+
+[return to ProMusic2015](/Programming-Music/ProMusic2015) || [Intro to Tone part 2](Intro-to-Tone-Part2) || [Intro to Tone part 4](Intro-to-Tone-Part4)
 
 # Intro-to-Tone-Part3
 Let's start really controlling musical parameters, using
