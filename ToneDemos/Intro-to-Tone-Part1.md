@@ -90,12 +90,13 @@ A variable piece of data we want to use. A variable could be a value or name. As
 Let's create a variable and **assign** something to it. Type out the lines below and be sure to capitalize the certain letters.
 
 ```javascript
+
     var myName;
     var myName = "Nick";
     var myNeighborsName;
     myNeighborsName = "Danny";
-```
 
+```
 
 We've created two variables `myName` and `myNeighborsName`. Now, let's tell the browser's console to print those names. Add the following text:
 
