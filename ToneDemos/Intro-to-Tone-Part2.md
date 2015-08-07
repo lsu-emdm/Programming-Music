@@ -4,7 +4,8 @@ published: true
 ---
 
 
-[return to ProMusic2015](ProMusic2015)
+
+[return to ProMusic2015](/Programming-Music/ProMusic2015)
 
 [Intro to Tone part 1](Intro-to-Tone-Part1)
 
