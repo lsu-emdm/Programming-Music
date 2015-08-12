@@ -1,6 +1,7 @@
 ---
 title: ProMusic2015
 published: true
+layout: default
 ---
 
 
