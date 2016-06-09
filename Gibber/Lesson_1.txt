@@ -12,3 +12,4 @@ press "control + enter" on the
 keyboard
 */
 
+a=Synth()
