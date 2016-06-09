@@ -1,0 +1,51 @@
+/* Programming Music 1
+Welcome to Gibber!
+The first thing we need to know is how to 
+execute code. Move your cursor to 
+line six and press "control + enter" */
+a = Sine(440)
+
+/*Great! Now press "control + period"
+as you can see in the bottom of the browser
+"Gibber has been cleared." 
+To execute more than one line of code, 
+place the cursor on a line and press 
+"alt + enter" Try it on line 15 */ 
+
+a = Sine(330)
+b = Drums('x.o.*.-.')
+/* both code in line 15 & 16 are executed
+Say you want to stop the tone, but not the 
+Drums :execute line 22, followed by 23
+and finally 24 (use "command + enter") */
+
+a.disconnect()
+a.connect()
+a._ //short and easy to type!
+
+/*If we want to change the drum pattern
+without interuupting the one in progress:
+Execute line 30, Use "shift + control + enter"*/
+
+b=Drums('xo**-...')
+
+/* Look in the top right of the browser,
+see where it says "gibber" and the grey block moves
+with the drums? when we use "shift+ctl+enter" gibber
+waits until the start of beat one (leftmost postion)
+to implement the executed code. This is very useful
+when executing code musically. 
+
+Try executing a new drum pattern with "ctl+enter" */
+b=Drums('x***o---') //it interrupts the pattern!
+
+/*When "ctl+enter" is used to execute code gibber 
+ignores the beats of it's internal metronome,
+adding "shift" to "ctl+enter" or "alt+enter" uses
+the internal clock to synchronize the sound to the
+next 'downbeat'
+
+Remember You can always press "control & period" to
+clear gibber entirely.
+
+End */

@@ -1,0 +1,14 @@
+/*
+Lesson 1
+Goals:
+ * excecute code in gibber
+ * stop 
+ * start music in time
+
+The first thing we need to know is how to 
+execute code. Move your cursor to 
+the line below
+press "control + enter" on the 
+keyboard
+*/
+

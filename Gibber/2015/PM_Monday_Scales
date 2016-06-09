@@ -1,0 +1,35 @@
+//Scale Stuff
+a=Pluck().note.seq([0,1,2,3,4,5,6,7],1/8)
+
+console.log(Gibber.scale.root)
+//This is the note we build our scale from
+//we can change it!
+
+Gibber.scale.root='bb3'
+Gibber.scale.root='c4'
+
+//Try Different Flavors!
+Gibber.scale.mode='Major'
+Gibber.scale.mode='Minor'
+
+b=['Major','Minor',
+'MajorPentatonic','MinorPentatonic']
+
+//Sequence the Flavor!
+Gibber.scale.mode.seq(b,1)
+
+a.note.values.reverse(); console.log(a.note.values)
+//does pretty much what it says
+
+//Mix it up!
+a.note.values.shuffle(); console.log(a.note.values)
+
+a.note.values.transpose(1);console.log(a.note.values)
+//Transposes our array by 1 scale degree
+//if you are hip, try .scale(2) or .scale(.5)
+
+a.note.values.invert();console.log(a.note.values);
+
+//this is really helpful if we want to go back
+//to the original values when we instantiated
+a.note.values.reset();console.log(a.note.values)
