@@ -1,0 +1,16 @@
+module( 'gibber/publications/SpeakLib' )
+
+speak = Speak({ pitch: 3, wordgap:10 })
+  .say.seq(['a','b','c','d'],1/4)
+
+carrier = Synth({ waveform:'PWM', pulsewidth:.1 })
+	.note.seq( [-1,-2,-3,-4], 1/2 )
+
+vox = Vocoder( carrier, speak, 16 )
+
+carrier._
+speak._
+
+carrier.seq.connect()
+speak.seq.connect()
+
