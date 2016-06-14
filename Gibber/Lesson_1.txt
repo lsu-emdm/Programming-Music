@@ -3,7 +3,7 @@ Lesson 1
 Goals:
  * excecute code in gibber
  * stop 
- * start music in time
+ * start music in time with clock
 
 The first thing we need to know is how to 
 execute code. Move your cursor to 
@@ -31,3 +31,7 @@ ALT+Enter
 a=Synth().note.seq([0,1,2,3,4,5,6,7,8,9],1/8)
 b=Drums('xoxo')
 
+//to turn off one object at a time execute
+a._
+
+b._

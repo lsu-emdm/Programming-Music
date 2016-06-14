@@ -1,0 +1,29 @@
+/* Programming Music 2
+Gibber has a built in clock, in the top right corner of the browser.
+The default meter is 4/4 time. 
+By pressing shift + control + enter the code 
+will execute at the start of the next measure
+*/
+a=Drums('xoxo')
+
+/*
+x = bassdrum
+o = snare
+* = hi hat
+- = open hi hat
+. = rest
+*/
+
+a.note.seq('****')
+a.note.seq('x-o-')
+a.note.seq('x*o*')
+a.note.seq('xoxo')
+
+console.log(a.note.values)
+
+//update patterns in the future!"
+//alt+enter execution
+future(function(){ a.note.seq('xoxo')},1)
+future(function(){ a.note.seq('x-x-')},2)
+future(function(){ a.note.seq('x*x*')},3)
+future(function(){ a.note.seq('****')},4)
